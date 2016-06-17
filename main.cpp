@@ -25,8 +25,12 @@ int main()
         {
             case 1:
                     int cant;
-                    printf("\n\n*Cuantos vehiculos desea registrar: ");
+                    do
+                    {
+                    printf("\n*Cuantos vehiculos desea registrar: ");
                     cin >> cant;
+                    if(cant<1) printf("ERROR: EL NUMERO DEBE SER MAYOR QUE 0\n");
+                    }while(cant<1);
                     fflush(stdin);
                     AgregarCarros(conchos, conchosLenght, cant);
                     conchosLenght+=cant;
