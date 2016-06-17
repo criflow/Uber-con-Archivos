@@ -37,7 +37,8 @@ typedef struct
     float pago;
     float devuelta;
     tiempo fecha;
-}transportePrestado;
+    int minutosDeViaje;
+}Servicio;
 
 int main()
 {
