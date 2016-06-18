@@ -21,4 +21,8 @@ typedef struct
     int minutosDeViaje;
 }Servicio;
 
+Servicio RegistrarServicio(carro[], int, pasajero[], int);
+void RegistrarServicios(Servicio[], int, int, carro[], int, pasajero[], int);
+void MostrarServicios(Servicio[], int, carro[], int, pasajero[], int);
+
 #endif // SERVICIOS_H_INCLUDED
