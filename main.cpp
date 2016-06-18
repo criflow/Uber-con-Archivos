@@ -13,6 +13,7 @@ void MostrarMenu();
 int main()
 {
     carro conchos[50];
+    pasajero cliente[50];
     int conchosLenght = 0;
     pasajero pasajeros[50];
     int pasajerosLenght = 0;
@@ -42,12 +43,21 @@ int main()
                     MostrarCarros(conchos, conchosLenght);
                     break;
             case 2:
-
+                    do
+                    {
+                    printf("\n*Cuantos pasajeros desea registrar: ");
+                    cin >> cant;
+                    if(cant<1) printf("ERROR: EL NUMERO DEBE SER MAYOR QUE 0\n");
+                    }while(cant<1);
+                    fflush(stdin);
+                    AgregarPasajeros(cliente, pasajerosLenght, cant);
+                    pasajerosLenght+=cant;
+                    MostrarPasajeros(cliente, pasajerosLenght);
                     break;
             case 3:
                     do
                     {
-                    printf("\n*Cuantos servicios desea registrar: ");
+                    printf("\n*rorCuantos servicios desea registrar: ");
                     cin >> cant;
                     if(cant<1) printf("ERROR: EL NUMERO DEBE SER MAYOR QUE 0\n");
                     }while(cant<1);
