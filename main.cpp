@@ -14,6 +14,11 @@ int main()
 {
     carro conchos[50];
     int conchosLenght = 0;
+    pasajero pasajeros[50];
+    int pasajerosLenght = 0;
+    Servicio servicios[50];
+    int serviciosLenght = 0;
+
     int opcion;
 
     do{
@@ -23,8 +28,8 @@ int main()
 
         switch(opcion)
         {
+            int cant;
             case 1:
-                    int cant;
                     do
                     {
                     printf("\n*Cuantos vehiculos desea registrar: ");
@@ -40,7 +45,16 @@ int main()
 
                     break;
             case 3:
-
+                    do
+                    {
+                    printf("\n*Cuantos servicios desea registrar: ");
+                    cin >> cant;
+                    if(cant<1) printf("ERROR: EL NUMERO DEBE SER MAYOR QUE 0\n");
+                    }while(cant<1);
+                    fflush(stdin);
+                    RegistrarServicios(servicios, serviciosLenght, cant, conchos, conchosLenght, pasajeros, pasajerosLenght);
+                    serviciosLenght+=cant;
+                    MostrarServicios(servicios, serviciosLenght, conchos, conchosLenght, pasajeros, pasajerosLenght);
                     break;
             case 4:
 
