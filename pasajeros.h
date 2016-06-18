@@ -6,7 +6,7 @@ typedef struct
     char nombre[20]; //nombre completo
     int id;
     char lugarDeTrabajo[10];
-    int celular;
+    double celular;
     char companiaCel[10];
 }pasajero;
 
@@ -16,3 +16,4 @@ void MostrarPasajeros(pasajero cliente[], int tam);
 
 
 #endif // PASAJEROS_H_INCLUDED
+
