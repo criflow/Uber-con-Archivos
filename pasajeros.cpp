@@ -22,7 +22,7 @@ pasajero Agregarpasajero()
     cin >> cliente.lugarDeTrabajo;
     fflush(stdin);
     printf("\n-Numero de celular del pasajero: ");
-    scanf("%d", &cliente.celular);
+    scanf("%lf", &cliente.celular);
     fflush(stdin);
     printf("\n-Compania de celular del pasajero: ");
     cin >> cliente.companiaCel;
@@ -56,11 +56,10 @@ void MostrarPasajeros(pasajero clientes[], int tam)
         printf("\n\n*pasajero #%d: ", i+1);
         printf("\n-Nombre del pasajero: %s", clientes[i].nombre);
         printf("\n-Lugar de Trabajo del pasajero: %s", clientes[i].lugarDeTrabajo);
-        printf("\n-Numero celular del pasajero: %d", clientes[i].celular);
+        printf("\n-Numero celular del pasajero: %10.0lf", clientes[i].celular);
         printf("\n-Compania de celular del pasajero: %s", clientes[i].companiaCel);
         printf("\n-Id del pasajero: %d", clientes[i].id);
     }
     getch();
     return;
 }
-
