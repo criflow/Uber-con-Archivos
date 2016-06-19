@@ -13,14 +13,20 @@ Servicio RegistrarServicio(carro conchos[], int conchosTam, pasajero pasajeros[]
 {
     Servicio serv;
     fflush(stdin);
-    //Hay que hacer una funcion para listar los pasajeros
+    MostrarPasajeros(pasajeros, pasajerosTam);
+    do{
     printf("\n-Id del pasajero: ");
-    cin >> serv.idPasajero; //Hay que poner un error cuando el id no es valido
-    fflush(stdin);
+    cin >> serv.idPasajero;
+    if(BuscarPasajero(pasajeros, pasajerosTam, serv.idPasajero)==false)
+        printf("\nERROR: INTRODUZCCA UN ID EXISTENTE");
+    }while(BuscarPasajero(pasajeros, pasajerosTam, serv.idPasajero)==false);
     MostrarCarros(conchos, conchosTam);
+    do{
     printf("\n-Ficha del carro: ");
-    cin >> serv.fichaVehiculo; //Hay que poner un error cuando ela ficha no es valida
-    fflush(stdin);
+    cin >> serv.fichaVehiculo;
+        if(BuscarVehiculo(conchos, conchosTam, serv.fichaVehiculo)==false)
+            printf("\nERROR: INTRODUZCCA UNA FICHA EXISTENTE");
+    }while(BuscarVehiculo(conchos, conchosTam, serv.fichaVehiculo)==false);
     printf("\n-*Fecha: ");
     printf("\n-Dia: ");
     scanf("%d", &serv.fecha.dia);
@@ -64,7 +70,7 @@ void RegistrarServicios(Servicio servs[], int tam, int cant, carro conchos[], in
     printf("------------------------- Servicio/s a agregar --------------------------------");
     for(int i=tam; i<(tam+cant); i++)
     {
-        printf("\n*Servicio #%d: ", i+1);
+        printf("\n*Servicio #%d: \n", i+1);
         servs[i] = RegistrarServicio(conchos, conchosTam, pasajeros, pasajerosTam);
     }
 }
