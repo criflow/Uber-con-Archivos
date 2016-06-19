@@ -49,7 +49,6 @@ void AgregarPasajeros(pasajero clientes[],int tam, int cant)
 
 void MostrarPasajeros(pasajero clientes[], int tam)
 {
-    system("cls");
     printf("------------------------- pasajeros --------------------------------");
     for(int i=0; i<tam; i++)
     {
@@ -60,6 +59,17 @@ void MostrarPasajeros(pasajero clientes[], int tam)
         printf("\n-Compania de celular del pasajero: %s", clientes[i].companiaCel);
         printf("\n-Id del pasajero: %d", clientes[i].id);
     }
+    printf("\n-----------------------------------------------------------------");
     getch();
     return;
+}
+
+bool BuscarPasajero(pasajero pasajeros[], int tam, int id)
+{
+    for(int i=0; i<tam; i++)
+    {
+        if(pasajeros[i].id == id)
+            return true;
+    }
+    return false;
 }
