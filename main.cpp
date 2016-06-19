@@ -111,7 +111,7 @@ void MostrarMenu()
     printf("\n----------------------------------------------------------------------------");
     printf("\n\t\t\t\t\t\t\t-------------------");
     printf("\n*Seleccione una de las siguientes opciones:\t\t|# de vehiculos: %d|", conchosLenght);
-    printf("\t\t\t\t\t\t\t\t|# de pasajeros: %d|", pasajerosLenght);
+    printf("\n\t\t\t\t\t\t\t|# de pasajeros: %d|", pasajerosLenght);
     printf("\n1. Registrar uno o mas vehiculos\t\t\t|# de servicios: %d|", serviciosLenght);
     printf("\n2. Registrar uno o mas pasajeros\t\t\t-------------------");
     printf("\n3. Registrar uno o mas servicios");
