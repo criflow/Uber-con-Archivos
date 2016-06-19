@@ -43,8 +43,7 @@ void AgregarCarros(carro conchos[],int tam, int cant)
 
 void MostrarCarros(carro conchos[], int tam)
 {
-    system("cls");
-    printf("------------------------- Carros --------------------------------");
+    printf("\n------------------------- Carros --------------------------------");
     for(int i=0; i<tam; i++)
     {
         printf("\n\n*Carro #%d: ", i+1);
@@ -53,6 +52,22 @@ void MostrarCarros(carro conchos[], int tam)
         printf("\n-Marca del carro: %s", conchos[i].marca);
         printf("\n-A%co del carro: %d", 164, conchos[i].ano);
     }
+    printf("\n-----------------------------------------------------------------");
     getch();
     return;
+}
+
+bool BuscarVehiculo(carro conchos[], int tam, char ficha[])
+{
+    for(int i=0; i<tam; i++)
+    {
+        for(int j=0; j<4; j++)
+        {
+            if(conchos[i].ficha[j] != ficha[j])
+                break;
+            else if(j== 3 && conchos[i].ficha[j] == ficha[j])
+                return true;
+        }
+    }
+    return false;
 }
