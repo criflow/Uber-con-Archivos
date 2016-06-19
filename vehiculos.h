@@ -3,15 +3,16 @@
 
 typedef struct
 {
-    char marca[10];
+    char marca[20];
     int ano;
-    char ficha[6];
+    char ficha[4];
     char propietario[20];
 }carro;
 
 carro AgregarCarro();
 void AgregarCarros(carro[], int, int);
 void MostrarCarros(carro conchos[], int tam);
+bool BuscarVehiculo(carro[], int, char[]);
 
 
 #endif // VEHICULOS_H_INCLUDED
