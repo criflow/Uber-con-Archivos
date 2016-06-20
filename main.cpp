@@ -92,6 +92,7 @@ int main()
 
                     break;
             case 6:
+                     MostrarServicios(servicios, serviciosLenght, conchos, conchosLenght, cliente, pasajerosLenght);
 
                     break;
             case 7:
