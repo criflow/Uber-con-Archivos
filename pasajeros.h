@@ -12,8 +12,8 @@ typedef struct
 
 pasajero AgregarPasajero();
 void AgregarPasajeros(pasajero[], int, int);
-void MostrarPasajeros(pasajero cliente[], int tam);
+void MostrarPasajeros(pasajero[], int);
+void MostrarPasajero(pasajero[], int, int);
 bool BuscarPasajero(pasajero[], int, int);
-
 
 #endif // PASAJEROS_H_INCLUDED
