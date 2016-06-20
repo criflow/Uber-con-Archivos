@@ -5,9 +5,6 @@
 #include "vehiculos.h"
 #include "pasajeros.h"
 #include "servicios.h"
-#include "vehiculos.h"
-#include "pasajeros.h"
-#include "servicios.h"
 
 using namespace std;
 
@@ -61,6 +58,24 @@ void MostrarPasajeros(pasajero clientes[], int tam)
     }
     printf("\n-----------------------------------------------------------------");
     getch();
+    return;
+}
+
+void MostrarPasajero(pasajero pasajeros[], int tam, int id)
+{
+    for(int i=0; i<tam; i++)
+    {
+        if(pasajeros[i].id == id)
+            {
+            printf("\n\n*pasajero #%d: ", i+1);
+            printf("\n-Nombre del pasajero: %s", pasajeros[i].nombre);
+            printf("\n-Lugar de Trabajo del pasajero: %s", pasajeros[i].lugarDeTrabajo);
+            printf("\n-Numero celular del pasajero: %10.0lf", pasajeros[i].celular);
+            printf("\n-Compania de celular del pasajero: %s", pasajeros[i].companiaCel);
+            printf("\n-Id del pasajero: %d", pasajeros[i].id);
+            return;
+            }
+    }
     return;
 }
 
