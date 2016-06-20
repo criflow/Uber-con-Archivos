@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <conio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "vehiculos.h"
 #include "pasajeros.h"
 #include "servicios.h"
@@ -61,13 +62,8 @@ bool BuscarVehiculo(carro conchos[], int tam, char ficha[])
 {
     for(int i=0; i<tam; i++)
     {
-        for(int j=0; j<4; j++)
-        {
-            if(conchos[i].ficha[j] != ficha[j])
-                break;
-            else if(j== 3 && conchos[i].ficha[j] == ficha[j])
-                return true;
-        }
+        if(strncmp(conchos[i].ficha, ficha, 4)==0)
+            return true;
     }
     return false;
 }
