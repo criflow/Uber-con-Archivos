@@ -5,6 +5,7 @@
 #include "vehiculos.h"
 #include "pasajeros.h"
 #include "servicios.h"
+#include "filtrado.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ void MostrarMenu();
     int conchosLenght = 5;
     pasajero cliente[50] = {
         {"pablo", 001, "mcdonalds", 8295743644, "claro"},
-        {"maria", 002, "banco central", 8094237824, "claro"},
+        {"maria", 002, "banco", 8094237824, "claro"},
         {"patricia", 003, "hospital", 8095780426, "orange"},
         {"marco", 004, "mercado", 8294287648, "viva"},
         {"carmen", 005, "tienda", 8495230873, "tricom"},
@@ -27,6 +28,7 @@ void MostrarMenu();
     };
     int pasajerosLenght = 6;
     Servicio servicios[50] = {
+        //ficha, id, pago, devuelta, dia, mes, ano, hora, min, seg, tiempo de viaje
         {"iud", 002, 50, 15, 24, 5, 1993, 4, 5, 30, 7},
         {"dkj", 005, 100, 50, 15, 7, 2000, 10, 25, 22, 10},
         {"p5l", 001, 150, 60, 6, 1, 2002, 15, 48, 50, 18},
@@ -84,7 +86,7 @@ int main()
                     MostrarServicios(servicios, serviciosLenght, conchos, conchosLenght, cliente, pasajerosLenght);
                     break;
             case 4:
-
+                    MostrarPasajerosFiltrado(conchos, conchosLenght, cliente, pasajerosLenght, servicios, serviciosLenght);
                     break;
             case 5:
 
