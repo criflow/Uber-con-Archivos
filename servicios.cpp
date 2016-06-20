@@ -74,7 +74,7 @@ void RegistrarServicios(Servicio servs[], int tam, int cant, carro conchos[], in
         servs[i] = RegistrarServicio(conchos, conchosTam, pasajeros, pasajerosTam);
     }
 }
-
+/
 void MostrarServicios(Servicio servs[], int tam, carro conchos[], int conchosTam, pasajero pasajeros[], int pasajerosTam)
 {
     printf("\n------------------------ Servicios ------------------------------");
