@@ -58,6 +58,24 @@ void MostrarCarros(carro conchos[], int tam)
     return;
 }
 
+
+void MostrarCarro(carro conchos[], int tam, char ficha[])
+{
+    for(int i=0; i<tam; i++)
+    {
+        if(strncmp(conchos[i].ficha, ficha, 4)==0)
+        {
+            printf("\n\n*Carro #%d: ", i+1);
+            printf("\n-Nombre del propietario: %s", conchos[i].propietario);
+            printf("\n-Ficha del carro: %s", conchos[i].ficha);
+            printf("\n-Marca del carro: %s", conchos[i].marca);
+            printf("\n-A%co del carro: %d", 164, conchos[i].ano);
+            return;
+        }
+    }
+    return;
+}
+
 bool BuscarVehiculo(carro conchos[], int tam, char ficha[])
 {
     for(int i=0; i<tam; i++)
