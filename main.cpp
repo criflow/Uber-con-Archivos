@@ -32,7 +32,7 @@ void MostrarMenu();
         {"iud", 002, 50, 15, 24, 5, 1993, 4, 5, 30, 7},
         {"dkj", 005, 100, 50, 15, 7, 2000, 10, 25, 22, 10},
         {"p5l", 001, 150, 60, 6, 1, 2002, 15, 48, 50, 18},
-        {"2li", 002, 25, 5, 28, 12, 2005, 1, 29, 36, 4},
+        {"21i", 002, 25, 5, 28, 12, 2005, 1, 29, 36, 4},
         {"iud", 003, 500, 350, 16, 9, 2010, 18, 10, 3, 30},
     };
     int serviciosLenght = 5;
@@ -89,7 +89,7 @@ int main()
                     MostrarPasajerosFiltrado(conchos, conchosLenght, cliente, pasajerosLenght, servicios, serviciosLenght);
                     break;
             case 5:
-
+                    MostrarCarrosFiltrado(conchos, conchosLenght, cliente, pasajerosLenght, servicios, serviciosLenght);
                     break;
             case 6:
                      MostrarServicios(servicios, serviciosLenght, conchos, conchosLenght, cliente, pasajerosLenght);
