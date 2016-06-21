@@ -11,7 +11,8 @@ typedef struct
 
 carro AgregarCarro();
 void AgregarCarros(carro[], int, int);
-void MostrarCarros(carro [], int );
+void MostrarCarros(carro [], int);
+void MostrarCarro(carro [], int, char[]);
 bool BuscarVehiculo(carro[], int, char[]);
 
 
