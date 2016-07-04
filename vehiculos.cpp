@@ -6,12 +6,20 @@
 #include "vehiculos.h"
 #include "pasajeros.h"
 #include "servicios.h"
+#include <fstream>
 
 using namespace std;
 
 carro AgregarCarro()
 {
     carro concho;
+    ofstream carro ("Vehiculo.txt", ios::app | ios::in | ios::out);
+    string getcontent;
+    int c, id;
+    ifstream cant ("cantidad.txt");
+    cant >> id;
+    c= id;
+
     fflush(stdin);
     printf("\n-Nombre del propietario: ");
     cin >> concho.propietario;
@@ -25,6 +33,16 @@ carro AgregarCarro()
     printf("\n-A%co del carro: ", 164);
     scanf("%d", &concho.ano);
     fflush(stdin);
+
+    carro << "-------- Carro #: "<< c+1 <<" --------" << endl
+    << "Propietario: " << concho.propietario << endl
+    << "Ficha: " << concho.ficha <<endl
+    << "Marca: " << concho.marca <<endl
+    << "Ano: " << concho.ano <<endl<<endl;;
+    ofstream num ("cantidad.txt");
+    num << c+1;
+    num.close();
+    c++;
 
     return concho;
 
@@ -45,6 +63,13 @@ void AgregarCarros(carro conchos[],int tam, int cant)
 void MostrarCarros(carro conchos[], int tam)
 {
     printf("\n------------------------- Carros --------------------------------");
+    string getcontent;
+    ifstream carro ("Vehiculo.txt");
+     while(getline(carro, getcontent))
+        {
+                cout << getcontent << endl;
+        }
+    /*
     for(int i=0; i<tam; i++)
     {
         printf("\n\n*Carro #%d: ", i+1);
@@ -52,7 +77,7 @@ void MostrarCarros(carro conchos[], int tam)
         printf("\n-Ficha del carro: %s", conchos[i].ficha);
         printf("\n-Marca del carro: %s", conchos[i].marca);
         printf("\n-A%co del carro: %d", 164, conchos[i].ano);
-    }
+    }*/
     printf("\n-----------------------------------------------------------------");
     getch();
     return;
